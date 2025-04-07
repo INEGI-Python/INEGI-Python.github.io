@@ -5,10 +5,12 @@ class generalizacion{
     Ayuda(metodo){
             return {
                     "reducePuntos":()=>{
-                     console.log("Ayuda en " +this.metodo)
-                        },
+                     console.log("Ayuda en "+  this.metodo)
+                    alert( metodo)    
+                    },
                     "separaLineas": idioma => {
                         console.log("Ayuda separa  Lineas en "+ idioma)
+                        alert(metodo)
                         }
                 }[metodo]
         }

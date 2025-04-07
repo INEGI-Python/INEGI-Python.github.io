@@ -5,10 +5,11 @@
     <script src="js/misFunciones.js"></script>
     <script>
       const ayuda = new generalizacion("Español")
-      ayuda.Ayuda("reducePuntos")
+      $("#cargaClase").css({"border":"1px solid red","baclground":"gray","color":"white"}).html("Ayuda").click(e => {ayuda.Ayuda("reducePoint")})
     </script>
   </head>
   <body>
-    <div id="prin"></div>
+    <div id="prin">DIV PRINCIPAL</div>
+    <div id="cargaClase"></div>
   </body>
 </html>
