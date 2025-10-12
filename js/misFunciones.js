@@ -1,6 +1,6 @@
 class generalizacion{
-    constructor(idioma="es"){
-        this.idioma = idioma == "es" ? "Español":"Totonaca"
+    constructor(i){
+        this.idioma = i == "es" ? "Español":"Totonaca"
     }
     Ayuda(metodo){
             return {
