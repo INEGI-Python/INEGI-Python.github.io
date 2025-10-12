@@ -23,7 +23,7 @@
 
   <script>
       const ayuda = new generalizacion("es")
-      $ayudaItem = $("#cargaClase").addClass('ayuda').html("Ayuda")
+      $ayudaItem = $("#cargaClase").addClass('ayuda').html(ayuda.idioma)
         $ayudaItem.on('click',function(e){console.log(e);   alert(ayuda.Ayuda("reducePoint")) })
     </script>
 </body>
