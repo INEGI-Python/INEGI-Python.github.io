@@ -23,7 +23,8 @@
 
   <script>
       const ayuda = new generalizacion("es")
-      $("#cargaClase").addClass('ayuda').html("Ayuda").on('click',e => { alert(ayuda.Ayuda("reducePoint")) })
+      $ayudaItem = $("#cargaClase").addClass('ayuda').html("Ayuda")
+        $ayudaItem.on('click',function(e){console.log(e);   alert(ayuda.Ayuda("reducePoint")) })
     </script>
 </body>
 </html>
