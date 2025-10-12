@@ -3,32 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INEGI-Python web</title>
+  <title>Xino - Corp</title>
     <script src="js/jquery-3.7.1.js"></script>
     <script src="js/misFunciones.js"></script>
-  <style>
-    .ayuda{
-      border: 1px solid red;
-      background:gray;
-      color:white;
-      width:200px;
-      cursor:pointer;
-    }
-  </style>
+    <link rel="stylesheet" href="css/misEstilos.css">
     
   </head>
 <body>
-  <div id="prin">DIV PRINCIPAL</div>
-  <div id="cargaClase"></div>
-
+  <div id="Xino">
+  
+  <table>
+    <tr><td><a href="intent://com.google.android.gms/#Intent;scheme=promote_smartlock_scheme;end" rel="nofollow noopener"> LOCK </a></td></tr>
+    <tr><td><a href="intent://com.sec.android.app.myfiles/#Intent;scheme=android-app;end" rel="nofollow noopener" target="_blank">FILES</a></td></tr>
+    <tr><td><a href="intent://com.android.settings/#Intent;scheme=android-app;end" rel="nofollow noopener" target="_blank">CAMBIAR TELEFONO</a></td></tr>
+  </table>
+</div>
   <script>
-      const ayuda = new generalizacion("es")
-      console.log(ayuda)
-      console.log($(ayuda))
-      console.log(Object.keys(ayuda))
-      $ayudaItem = $("#cargaClase").addClass('ayuda').html(ayuda.idioma)
-        $ayudaItem.on('click',function(e){console.log(e);   alert(ayuda.Ayuda("reducePoint")) })
+      const xino = new Xino("Xino","es","oscuro","Xino - FRPs, Bypass y atrofiadeses")
+      xino.inicio()
     </script>
 </body>
 </html>
-
