@@ -6,9 +6,17 @@
   <title>INEGI-Python web</title>
     <script src="js/jquery-3.7.1.js"></script>
     <script src="js/misFunciones.js"></script>
+  <style>
+    .ayuda{
+      border: 1px solid red;
+      background:gray;
+      color:white;
+      width:200px;
+    }
+  </style>
     <script>
       const ayuda = new generalizacion("es")
-      $("#cargaClase").css({"border":"1px solid red","baclground":"gray","color":"white","width:"200px"}).html("Ayuda").click(e => {ayuda.Ayuda("reducePoint")})
+      $("#cargaClase").addClass('ayuda').html("Ayuda").click(e => {ayuda.Ayuda("reducePoint")})
     </script>
   </head>
 <body>
