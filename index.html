@@ -12,6 +12,7 @@
       background:gray;
       color:white;
       width:200px;
+      cursor:pointer;
     }
   </style>
     
@@ -22,7 +23,7 @@
 
   <script>
       const ayuda = new generalizacion("es")
-      $("#cargaClase").addClass('ayuda').html("Ayuda").click(e => {ayuda.Ayuda("reducePoint")})
+      $("#cargaClase").addClass('ayuda').html("Ayuda").on('click',e => { alert(ayuda.Ayuda("reducePoint")) })
     </script>
 </body>
 </html>
