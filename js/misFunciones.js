@@ -1,6 +1,6 @@
 class generalizacion{
     constructor(i){
-        this.idioma = i == "es" ? "Español":"Totonaca"
+        this.idioma = i == "es" ? "Español":"Totonaca";
     this.Ayuda = metodo=>{
             return {
                     "reducePuntos":()=>{
@@ -14,5 +14,6 @@ class generalizacion{
                          return tex   
                         }
                 }[metodo]
-        }
+        };
+    }
 }
