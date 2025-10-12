@@ -4,12 +4,12 @@ class generalizacion{
     }
   function Ayuda(metodo){
             return {
-                    "reducePuntos":()=>{
+                    "reducePuntos":function(){
                          let tex = `Ayuda de la función ${metodo} en ${this.idioma}`
                          console.log(tex)
                          return tex   
                     },
-                    "separaLineas": () => {
+                    "separaLineas": function(){
                         let tex = `Ayuda de la función ${metodo} en ${this.idioma}`
                          console.log(tex)
                          return tex   
