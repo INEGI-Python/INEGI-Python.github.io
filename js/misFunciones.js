@@ -1,8 +1,7 @@
 class generalizacion{
     constructor(i){
         this.idioma = i == "es" ? "Español":"Totonaca"
-    }
-    Ayuda(metodo){
+    this.Ayuda = metodo=>{
             return {
                     "reducePuntos":()=>{
                          let tex = `Ayuda de la función ${metodo} en ${this.idioma}`
