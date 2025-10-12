@@ -1,16 +1,18 @@
 class generalizacion{
-    constructor(idioma="es"){
+    constructor(idioma="Español"){
         this.idioma = idioma
     }
     Ayuda(metodo){
             return {
                     "reducePuntos":()=>{
-                     console.log("Ayuda en "+  this.metodo)
-                    alert( metodo)    
+                         let tex = `Ayuda de la función ${metodo} en ${this.idioma}`
+                         console.log(tex)
+                         return tex   
                     },
-                    "separaLineas": idioma => {
-                        console.log("Ayuda separa  Lineas en "+ idioma)
-                        alert(metodo)
+                    "separaLineas": () => {
+                        let tex = `Ayuda de la función ${metodo} en ${this.idioma}`
+                         console.log(tex)
+                         return tex   
                         }
                 }[metodo]
         }
