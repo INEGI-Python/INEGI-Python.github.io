@@ -10,7 +10,6 @@ class Xino{
         var r = document.querySelector(':root');
         r.style.setProperty('--bgTema', this.tema=='claro' ? 'var(--bgClaro)':'var(--bgOscuro)')
         r.style.setProperty('--colorTema', this.tema=='claro' ? 'var(--textClaro)':'var(--textOscuro)')
-        return this.tema=='claro' ? 'O':'C'
     }
     inicio(dat){
         let $main = $(`#${this.principal}`)
@@ -18,7 +17,7 @@ class Xino{
         $main.addClass("config tema")
         let tmp = $main.html()
         $main.html($("<h1>").html(this.titulo))
-        $main.append($("<div>").html("O").addClass("btnTema").click(e=>{e.currentTarget.innerText = this.cambiarTema(e.currentTarget.innerText =="C" ? "claro":"oscuro")}))
+        $main.append($("<div>").html($("<i>").addClass("fa-solid fa-circle-half-stroke")).addClass("btnTema").click(e=>{this.cambiarTema(this.tema =="oscuro" ? "claro":"oscuro")}))
         let $contenido = $("<div>")
         $contenido.addClass("contenido")
         let keys = Object.keys(dat)

@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Xino - Corp</title>
-    <script src="js/jquery-3.7.1.js"></script>
-    <script src="js/misFunciones.js"></script>
-    <link rel="stylesheet" href="css/misEstilos.css">
+  <link rel="stylesheet" href="css/misEstilos.css">
+  <script src="js/jquery-3.7.1.js"></script>
+  <script src="js/misFunciones.js"></script>
+  <link rel="stylesheet" href="./css/fontawesome/all.css">
+  <script src="./js/fontawesome/all.js"></script>
     
   </head>
 <body>
@@ -14,10 +16,37 @@
   
 </div>
   <script>
-       fetch("datos.json").then(response=>{return response.json()}).then(datos=>{console.log(datos)
-        const xino = new Xino("Xino","es","claro","Xino - FRPs, Bypass y atrofiadeses")
-        xino.inicio(datos)
-       })
+        var datos = {
+    "1":
+        {
+            "titulo":"Lock Screen",
+            "imagen":"img/lock.jpg",
+            "vinculo":"intent://com.google.android.gms/#Intent;scheme=promote_smartlock_scheme;end"
+        },
+    "2":
+        {
+            "titulo":"FILES",
+            "imagen":"img/file.jpg",
+            "vinculo":"intent://com.sec.android.app.myfiles/#Intent;scheme=android-app;end"
+        },
+    "3":
+        {
+            "titulo":"Cambiar Telefono",
+            "imagen":"img/cambTel.jpg",
+            "vinculo":"intent://com.android.settings/#Intent;scheme=android-app;end"
+        }
+}
+
+const xino = new Xino("Xino","es","claro","Xino - FRPs, Bypass y atrofiadeses")
+console.log(document.location.href)
+if(document.location.href.substring(0,5)=="https"){
+        fetch("datos.json").then(response=>{return response.json()}).then(datos=>{console.log(datos)
+              xino.inicio(datos)
+              })
+ }else{
+    xino.inicio(datos)
+   }
+
     </script>
 </body>
 </html>
