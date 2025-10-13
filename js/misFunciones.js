@@ -5,19 +5,31 @@ class Xino{
         this.titulo = tit
         this.principal = div
         }
-    inicio(){
+    cambiarTema(tema){
+        this.tema=tema
+        var r = document.querySelector(':root');
+        r.style.setProperty('--bgTema', this.tema=='claro' ? 'var(--bgClaro)':'var(--bgOscuro)')
+        r.style.setProperty('--colorTema', this.tema=='claro' ? 'var(--textClaro)':'var(--textOscuro)')
+        return this.tema=='claro' ? 'O':'C'
+    }
+    inicio(dat){
         let $main = $(`#${this.principal}`)
-        $main.addClass("config "+ this.tema)
+        this.cambiarTema(this.tema)
+        $main.addClass("config tema")
         let tmp = $main.html()
-        console.log($main)
         $main.html($("<h1>").html(this.titulo))
+        $main.append($("<div>").html("O").addClass("btnTema").click(e=>{e.currentTarget.innerText = this.cambiarTema(e.currentTarget.innerText =="C" ? "claro":"oscuro")}))
         let $contenido = $("<div>")
-        $contenido.html("Contenido").addClass("contenido")
-        let $tabla = $(tmp)[0].rows
-        console.log(Array($tabla))
-        Array($tabla).forEach(r => {
-            $contenido.append(r)
-        });
+        $contenido.addClass("contenido")
+        let keys = Object.keys(datos)
+        console.log(keys.length)
+        keys.forEach(k => {  
+            var _d = datos[k]
+            let $tarjeta=$("<div>").addClass("tarjeta").attr("id",`tar-${k}`)
+            $tarjeta.html($("<div>").addClass("titulo").html(_d["titulo"])).append($("<div>").addClass("imagen").html($("<img>").attr({"src":_d["imagen"],"width":"100%"} ))).append($("<div>").addClass("vinculo").html(`<a href="${_d['vinculo']}">ABRIR</a>`))
+            $contenido.append($tarjeta)
+        })
+
 
 
         $main.append($contenido)
