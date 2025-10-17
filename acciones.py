@@ -1,7 +1,13 @@
 import pyautogui as pa
 import time as t
+import os
+total,tiempo=3,0
+while tiempo<total:
+    os.system("cls")
+    print(f"Faltan {total-tiempo} min para la Accion")
+    t.sleep(60)
+    tiempo+=1
 
-t.sleep(60*30)
 pa.click()
 t.sleep(10)
 shot = pa.screenshot("remoto.jpg",region=(50,50,1000,900))
