@@ -19,14 +19,14 @@
   <div id="map"></div>
   <script>
 
-      const map = new Map({
-          view: new View({
+      -const map = new ol.Map({
+          view: new ol.View({
           center: [0, 0],
           zoom: 1,
      }),
            layers: [
-       new TileLayer({
-          source: new OSM(),
+       new ol.TileLayer({
+          source: new ol.OSM(),
        }),
    ],
         target: 'map',
