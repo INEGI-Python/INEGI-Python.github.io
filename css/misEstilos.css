@@ -8,10 +8,18 @@
  }
  
  
- body{
-    margin:0;
-    padding:0;
- }
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
  .config{
      position: absolute;
    
@@ -28,14 +36,6 @@
     background-color: var(--bgTema);
     color:var(--colorTema);
 }
-#map{
-  position:absolute;  
- width:50%;
-   height:50%;
-   border:1px solid  black;
- 
-}
-
 
 
 
