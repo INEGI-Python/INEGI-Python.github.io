@@ -28,6 +28,16 @@
     background-color: var(--bgTema);
     color:var(--colorTema);
 }
+#map{
+  position:absolute;  
+ width:50%;
+   height:50%;
+   border:1px solid  black;
+ 
+}
+
+
+
 
 .contenido{
     width: 100%;
