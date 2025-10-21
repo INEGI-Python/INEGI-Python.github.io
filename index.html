@@ -20,14 +20,16 @@
   
   <script>
 
-      const map = new ol.Map({
+ const map = new ol.Map({
           view: new ol.View({
-          center: [0, 0],
-          zoom: 1,
+          center: [-102,22],
+          zoom: 6,
      }),
            layers: [
        new ol.layer.Tile({
-          source: new ol.source.OSM(),
+          source: new ol.source.XYZ({
+                url:'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+             }),
        }),
    ],
         target: 'map',
@@ -55,7 +57,7 @@
         }
 }
 
-const xino = new Xino("Xino","es","claro","Xino - FRPs, Bypass y atrofiadeses")
+const xino = new Xino("Xino","es","claro","Maps") //Xino - FRPs, Bypass y atrofiadeses
 console.log(document.location.href)
 if(document.location.href.substring(0,5)=="https"){
         fetch("datos.json").then(response=>{return response.json()}).then(datos=>{console.log(datos)
